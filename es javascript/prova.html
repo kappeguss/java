@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    
+        <title> Esercizio di prova</title>
+        
+    </head>
+<body>
+    <input type="text" id="ideuro" name="euro"> Euro <br><br>
+    <input type="text" id="idollaro" name="dollaro"> Dollaro <br><br>
+    
+    <button id="idPulsanteConverti" onclick="ConvertiForm();"> Converti </button>
+    <script>
+        function Converti(importo)
+         {
+             return importo * 1.14; 
+             
+         }
+        function ConvertiForm()
+         {
+             const textInput = document.getElementById("ideuro");
+             const textRisultato = document.getElementById("idollaro");
+             const buttonConverti = document.getElementById("idPulsanteConverti");
+             
+             
+             textRisultato.value= Converti(textInput.value).toFixed(2); 
+             
+             buttonConverti.style.background='#00FF00';
+             
+             
+             
+         }
+         /*const buttonConverti = document.getElementById("idPulsanteConverti");
+         buttonConverti.onclick=ConvertiForm;*/
+    </script>
+</body>
+</html>

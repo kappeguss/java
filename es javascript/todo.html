@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My simple TODO list</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>My simple TODO list</h1>
+
+    <p id="ciao">TUTTO BENE?</p> <!-- document.getElementById("ciao") -->
+
+    <p class="infame">GAME OVER</p> <!-- document.getElementByClassName("infame")-->
+    <p class="infame">START GAME</p>
+
+    <form id="add_todo_form">
+        <input type="text" id="todo_text"><button id="bottone">+</button>
+    </form>
+
+    <ul class="todo-list">
+        <li class="todo-list-item done">
+            <input type="checkbox" class="todo-list-item-done" checked disabled>
+            <span class="todo-list-item-description">Learn programming</span>
+        </li>
+        <li class="todo-list-item">
+            <input type="checkbox" class="todo-list-item-done">
+            <span class="todo-list-item-description">Learn JavaScript</span>
+        </li>
+    </ul>
+    <script src="todo.js"></script>
+</body>
+</html>
+
+<!-- 
+CREAZIONE ELEMENTO
+
+const span = document.createElement("span");
+undefined
+document.body.appendChild(span)
+<span>​</span>​
+span.textContent = "FINE PAGINA";
+'FINE PAGINA'
+
+BLOCCO DELLA FORM PER NON RIAGGIORNA LA PAGINA 
+
+document.getElementById("bottone").onclick = function(evt) {
+    evt.preventDefault();
+    console.log(evt);
+};
+
+PIU' UTILE E MI PERMETTE DI FARE PIU' METODI CONTEMPORANEAMENTE A UN EVENTO
+
+document.getElementById("bottone").addEventListener("click", function(evento) {
+    evento.preventDefault();
+    console.log(1);
+    
+})
+
+document.getElementById("bottone").addEventListener("click", function(evento) {
+    evento.preventDefault();
+    console.log(2);
+    
+})
+
+document.getElementById("bottone").addEventListener("click", function(evento) {
+    evento.preventDefault();
+    console.log(3);
+    
+})
+
+PER POTER SCRIVERE UTILIZZARE LA CASELLA DI INPUT ANCHE SE LA PAGINA NON SI AGGIORNA 
+
+form.onsubmit = function(evento) {
+    evento.preventDefault();
+    console.log(textInput.value);
+}
+
+
+
+-->
